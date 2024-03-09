@@ -1,0 +1,100 @@
+/* contributed_recipe.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #007bff;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.header-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card .recipe-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.recipe-card .recipe-details {
+    padding: 10px;
+}
+
+.recipe-card .recipe-details p {
+    margin: 5px 0;
+}
+
+.recipe-card .recipe-details p strong {
+    font-weight: bold;
+}
+
+.recipe-card .recipe-details p:last-child {
+    white-space: pre-wrap;
+}
+
+/* Zooming in */
+@media (min-width: 1200px) {
+    body {
+        zoom: 1.2;
+    }
+}
+
+/* contributed_recipe.css */
+
+/* Existing styles... */
+
+/* contributed_recipe.css */
+
+/* Existing styles... */
+
+.delete-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px; /* Changing border radius to a rounded shape */
+    background-color: #ff6b6b; /* Red color */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto; /* Centering the button */
+    text-transform: uppercase; /* Making the text uppercase */
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+.delete-btn:hover {
+    background-color: #ff9f9f; /* Lighter red color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover for a subtle effect */
+}

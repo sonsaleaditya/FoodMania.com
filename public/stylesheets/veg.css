@@ -1,0 +1,182 @@
+/* veg.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #07ff87;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+nav button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #011402;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.recipe {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.recipe p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.recipe {
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe.expanded {
+    transform: scale(1.2);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add this CSS code for the back button */
+#backButton {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+#backButton:hover {
+    background-color: #011402;
+}
+/* Basic Reset and Styles */
+
+/* ... (previous CSS remains the same) ... */
+
+/* Refinement of Container and Login Container */
+
+.remember-forgot {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkmark:after {
+    content: '\2713';
+    font-size: 14px;
+    color: transparent;
+    transition: color 0.3s;
+}
+
+.checkbox input:checked + .checkmark:after {
+    color: #4CAF50;
+}
+
+.remember-text {
+    margin-right: 10px;
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+  
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #090401;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.back-to-home:hover {
+    background-color: #07ff66;
+    color: #120601;
+}
+
+

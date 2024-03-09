@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Recipe</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/individualRecipe.css">
+</head>
+<body>
+    <!-- Your previous HTML structure remains the same -->
+
+<main>
+    <section class="recipe-container" id="recipeContainer">
+        <% if (recipe) { %>
+            <article class="recipe">
+                <h2><%= recipe.recipename %></h2>
+                <p><strong>Ingredients:</strong> <%= recipe.Ingredients %></p>
+                <p><strong>Prep Time:</strong> <%= recipe.PrepTimeInMins %> mins</p>
+                <p><strong>Cook Time:</strong> <%= recipe.CookTimeInMins %> mins</p>
+                <p><strong>Total Time:</strong> <%= recipe.TotalTimeInMins %> mins</p>
+                <p><strong>Servings:</strong> <%= recipe.Servings %></p>
+                <p><strong>Instructions:</strong> <%= recipe.Instructions %></p>
+                <button onclick="goBack()">Go Back</button>
+            </article>
+        <% } else { %>
+            <p>No recipe details found.</p>
+        <% } %>
+    </section>
+</main>
+
+<script>
+    function goBack() {
+        // Redirect back to the main page or load the previous content
+        window.location.href = '/';
+    }
+</script>
+
+</body>
+</html>

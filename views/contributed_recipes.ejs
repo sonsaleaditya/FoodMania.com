@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributed Recipes</title>
+    <link rel="stylesheet" href="../public/stylesheets/contributed_recipe.css"> <!-- Linking the CSS file -->
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Users' Submitted Recipes</h1>
+    </header>
+    <section class="recipe-container">
+        <% contributedRecipes.forEach(recipe => { %>
+            <div class="recipe-card">
+                <h2 class="recipe-name"><%= recipe.recipe_name %></h2>
+                <div class="recipe-details">
+                    <p><strong>Name:</strong> <%= recipe.name %></p>
+                    <p><strong>Email:</strong> <%= recipe.mail %></p>
+                    <p><strong>Recipe Name:</strong> <%= recipe.recipe_name %></p>
+                    <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+                    <p><strong>Prep Time:</strong> <%= recipe.prep_time %> mins</p>
+                    <p><strong>Cook Time:</strong> <%= recipe.cook_time %> mins</p>
+                    <p><strong>Total Time:</strong> <%= recipe.total_time %> mins</p>
+                    <p><strong>Servings:</strong> <%= recipe.servings %></p>
+                    <p><strong>Instructions:</strong><br><%= recipe.instructions %></p>
+                    <form action="/delete-recipe" method="POST">
+                        <input type="hidden" name="recipeName" value="<%= recipe.recipe_name %>">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% }); %>
+    </section>
+</body>
+</html>

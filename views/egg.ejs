@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Egg Recipes</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/egg.css">
+</head>
+<body>
+    <header>
+        <h1>Egg Recipes</h1>
+        <nav>
+            <form id="searchForm" action="/search/egg" method="GET">
+                <input type="text" id="searchInput" name="srch" placeholder="Search Egg Recipes">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+        <a href="/index" class="back-to-home">Back to Home</a>
+    </header>
+
+    <main>
+        <section class="recipe-container" id="recipeContainer">
+            <% if (egg && egg.length > 0) { %>
+                <% egg.forEach(recipe => { %>
+                    <article class="recipe" onmouseover="expandRecipe(this)" onmouseout="shrinkRecipe(this)" onclick="viewRecipe('<%= recipe.RecipeName %>')">
+                        <h2><%= recipe.recipename %></h2>
+                        <p><strong>Ingredients:</strong> <%= recipe.ingredients %></p>
+                        <p><strong>Prep Time:</strong> <%= recipe.prepTimeInMins %> mins</p>
+                        <p><strong>Cook Time:</strong> <%= recipe.cookTimeInMins %> mins</p>
+                        <p><strong>Total Time:</strong> <%= recipe.totalTimeInMins %> mins</p>
+                        <p><strong>Servings:</strong> <%= recipe.servings %></p>
+                        <p><strong>Instructions:</strong> <%= recipe.instructions %></p>
+                    </article>   
+                <% }); %>
+            <% } else { %>
+                <p>No egg recipes found.</p>
+            <% } %>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Egg Recipes. All rights reserved.</p>
+    </footer>
+
+    <script src="./javascripts/egg1.js"></script>
+</body>
+</html>

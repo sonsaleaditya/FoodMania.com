@@ -1,0 +1,123 @@
+/* egg.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ffc107;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+nav button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #45a049;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.recipe {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe:nth-child(odd) {
+    background-color: #f5f5f5; /* Light gray background for odd cards */
+}
+
+.recipe:nth-child(even) {
+    background-color: #e8f0fe; /* Light blue background for even cards */
+}
+
+.recipe h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.recipe p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/*  start from here */
+
+
+/* Your existing styles for recipe cards and other elements */
+
+/* Additional styles for expanding on hover */
+.recipe {
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe.expanded {
+    transform: scale(1.2);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+  
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #090401;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.back-to-home:hover {
+    background-color: #07ff66;
+    color: #120601;
+}
+
+
+

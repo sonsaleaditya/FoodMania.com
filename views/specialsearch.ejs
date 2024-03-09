@@ -1,0 +1,71 @@
+<!-- specialsearch.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Ingredient Search</title>
+    <!-- Add your CSS links or stylesheets here -->
+    <link rel="stylesheet" href="./stylesheets/specialsearch.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Discover Delicious Recipes</h1>
+        <p class="quote">"Good food is the foundation of genuine happiness."</p>
+        <a href="/index" class="back-to-home">Back to Home</a>
+    </header>
+    
+    <!-- Form for selecting category and inputting ingredients -->
+    <form id="searchForm" method="GET">
+        <label for="category">Select Category:</label>
+        <select id="category" name="category">
+            <option value="veg">Vegetarian</option>
+            <option value="nonveg">Non-Vegetarian</option>
+            <option value="egg">Eggetarian</option>
+        </select>
+        <br><br>
+        <label for="ingredients">Enter Ingredients (comma-separated):</label>
+        <input type="text" id="ingredients" name="ingredients">
+        <br><br>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Displaying search results -->
+    <div class="recipe-container">
+        <% if (results && results.length > 0) { %>
+            <% results.forEach(recipe => { %>
+                <div class="recipe">
+                    <h2><%= recipe.recipename %></h2>
+                    <p><strong>Ingredients:</strong> <%= recipe.Ingredients %></p>
+                    <p><strong>Prep Time:</strong> <%= recipe.PrepTimeInMins %> mins</p>
+                    <p><strong>Cook Time:</strong> <%= recipe.CookTimeInMins %> mins</p>
+                    <p><strong>Total Time:</strong> <%= recipe.TotalTimeInMins %> mins</p>
+                    <p><strong>Servings:</strong> <%= recipe.Servings %></p>
+                    <p><strong>Instructions:</strong></p>
+                    <p><%= recipe.Instructions %></p>
+                </div>
+                
+            <% }); %>
+        <% } else { %>
+            <p class="no-recipes">No recipes found matching the ingredients.</p>
+        <% } %>
+    </div>
+
+    <script src="./javascripts/specialsearch.js"></script>
+    <!-- Add any additional scripts or JavaScript here -->
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            const category = document.getElementById('category').value;
+            const ingredients = document.getElementById('ingredients').value;
+
+            // Build the URL based on selected category and ingredients
+            const url = `/specialsearch/${category}?ingredients=${ingredients}`;
+
+            // Redirect to the constructed URL
+            window.location.href = url;
+        });
+    </script>
+</body>
+</html>

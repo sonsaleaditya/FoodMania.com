@@ -1,0 +1,104 @@
+/* nonveg.css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff5107;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+nav button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #a00a3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #456ba0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.recipe {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.recipe p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #120601;
+    background-color: transparent;
+    border: 2px solid #090401;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.back-to-home:hover {
+    background-color: #ff5107;
+    color: #fff;
+}

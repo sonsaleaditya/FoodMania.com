@@ -1,0 +1,86 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.delete-btn, .undo-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete-btn {
+    background-color: #ff5656;
+    color: white;
+}
+
+.undo-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-btn:hover, .undo-btn:hover {
+    background-color: #d12424;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Animation for delete button */
+@keyframes deleteAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.delete-btn:hover {
+    animation: deleteAnimation 0.3s ease-in-out;
+}
+
+/* styles.css */
+/* ... Other styles ... */
+
+.quote-title {
+    font-size: 3em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-style: italic;
+    background-color: #ffd700;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

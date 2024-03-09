@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Recipes</title>
+</head>
+
+<body>
+  <div id="recipes-container">
+    <!-- Display recipes here -->
+  </div>
+
+  <script>
+    fetch('/users-and-recipes')
+      .then(response => response.json())
+      .then(data => {
+        const recipesContainer = document.getElementById('recipes-container');
+
+        data.forEach(recipe => {
+          const recipeDiv = document.createElement('div');
+          recipeDiv.innerHTML = `
+            <p>Recipe Name: ${recipe.recipe_name}</p>
+            <p>Ingredients: ${recipe.ingredients}</p>
+            <button onclick="deleteRecipe(${recipe.recipe_id})">Delete</button>
+          `;
+          recipesContainer.appendChild(recipeDiv);
+        });
+      });
+
+    function deleteRecipe(recipeId) {
+      fetch(`/delete-recipe/${recipeId}`, {
+        method: 'DELETE'
+      })
+      .then(response => {
+        if (response.ok) {
+          // Recipe deleted, update UI or perform other actions
+          console.log('Recipe deleted successfully');
+        } else {
+          console.error('Failed to delete recipe');
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+/* Background Image */
+body {
+    background-image: url('../images/bg.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Update Login Container */
+.login-container {
+    background-color: rgba(0, 0, 0, 0); /* Full transparency */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased shadow depth */
+}
+
+/* Heading Styles */
+h1 {
+    color: #000000; /* Black color for heading */
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+/* Input Fields */
+.input-field {
+    margin-bottom: 20px;
+    position: relative;
+    color: #000000; /* Text color for input fields */
+}
+
+label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: rgba(247, 247, 247, 0.8); /* Semi-transparent background for labels */
+    padding: 0 5px;
+    color: #000000;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #fff; /* White border for input fields */
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    color: #000000; /* Text color for input fields */
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
+}
+
+input:focus + label {
+    top: -15px;
+    font-size: 12px;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Remember and Forgot Text */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #000000; /* Text color for remember-forgot section */
+}
+
+/* Register Link */
+.register-link {
+    font-size: 14px;
+    color: #000000; /* Text color for register link */
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 400px;
+    width: 90%;
+    margin: 160px auto 0; /* Center the container horizontally and add 100px top margin */
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    padding-right: 400px; /* Add some right padding to shift it slightly left */
+}

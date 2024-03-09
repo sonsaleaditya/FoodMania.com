@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+</head>
+<body>
+    <section> 
+    <div class="container">
+        <h1 class="form-title">REGISTER</h1>
+        <form action="/reg" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" required id="fullName" name="fullName" placeholder="Enter Full Name">
+                </div>
+        
+                <div class="user-input-box">
+                    <label for="username">Username</label>
+                    <input type="text" required id="username" name="username" placeholder="Enter Username">
+                </div>
+        
+                <div class="user-input-box">
+                    <span class="icon"><ion-icon name="email"></ion-icon></span>
+                    <label for="email">Email</label>
+                    <input type="text" required id="email" name="email" placeholder="Enter Email">
+                </div>
+        
+                <div class="user-input-box">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="text" required id="phonenumber" name="phonenumber" placeholder="Enter Phone Number">
+                </div>
+        
+                <div class="user-input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password">
+                </div>
+            </div>
+            <div class="gender-details-box">
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        
+        
+    </div>
+    </section>
+    <script src="../public/javascripts/register.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

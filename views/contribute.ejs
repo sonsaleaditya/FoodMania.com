@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./stylesheets/contribute_style.css">
+</head>
+<body>
+    <section> 
+        <div class="container">
+            <h1 class="form-title">Contribute</h1>
+            <form action="/contribute" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="main-user-info">
+                    <!-- Existing fields -->
+                    <div class="user-input-box">
+                        <label for="FullName">Full Name</label>
+                        <input type="text" required
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter Full Name">
+                    </div>
+
+                    <div class="user-input-box">
+                        <span class="icon"><ion-icon name="email"></ion-icon></span>
+                        <label for="email">Email</label>
+                        <input type="text" required
+                                id="email"
+                                name="email"
+                                placeholder="Enter Email">
+                    </div>
+
+                    <!-- New fields -->
+                    <div class="user-input-box">
+                        <label for="Receipename">Receipe Name</label>
+                        <input type="text" required
+                                id="Rname"
+                                name="Receipename"
+                                placeholder="Enter Receipe name">
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="Ingredients">Ingredients</label>
+                        <input type="text" required
+                                id="Ingredients"
+                                name="Ingredients"
+                                placeholder="Enter Ingredients">
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="PrepTime">Prep Time</label>
+                        <input type="text" required
+                                id="PrepTime"
+                                name="PrepTime"
+                                placeholder="Enter Prep Time">
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="CookTime">Cook Time</label>
+                        <input type="text" required
+                                id="CookTime"
+                                name="CookTime"
+                                placeholder="Enter Cook Time">
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="TotalTime">Total Time</label>
+                        <input type="text" required
+                                id="TotalTime"
+                                name="TotalTime"
+                                placeholder="Enter Total Time">
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="Servings">Servings</label>
+                        <input type="text" required
+                                id="Servings"
+                                name="Servings"
+                                placeholder="Enter Number of Servings">
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="Instructions">Instructions</label>
+                        <textarea required
+                            id="Instructions"
+                            name="Instructions"
+                            placeholder="Enter Your Recipe Instructions"></textarea>
+                    </div>
+                </div>
+                <div class="form-submit-btn">
+                    <input type="submit" value="Submit Your Recipe">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

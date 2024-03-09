@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tailwind.config.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>dishdynamo.com</title>
+    <link rel="icon" href="./images/iconofweb.png" type="image/png">
+    
+</head>
+
+<body>
+    <header>
+        <section class="w-[100%] h-[65px] ">
+            <nav class="flex flex-row justify-between items-center fixed right-0 left-0 bg-black shadow-inner text-white
+        z-[1000] border-b-[1px]  border-[#72ff03]">
+                <div class="w-[12%] mx-2">
+                    <img class="w-[100%] cursor-pointer my-2 " src="./images/dd.png" alt="logo">
+                </div>
+
+                <ul class="list-none ">
+                    <li class="inline-block mx-4"><a
+                            class="no-underline text-white font-medium text-base after:w-0 after:h-[2px] after:bg-[#72FF03] after:block  after:transition-all hover:after:w-[100%] hover:text-[#72FF03] transition"
+                            href="/contribute">Contribute</a></li>
+                    <li class="inline-block mx-4"><a
+                            class="no-underline text-white font-medium text-base after:w-0 after:h-[2px] after:bg-[#72FF03] after:block  after:transition-all hover:after:w-[100%] hover:text-[#72FF03] transition"
+                            href="/tips">Tips</a></li>
+                    <li class="inline-block mx-4"><a
+                            class="no-underline text-white font-medium text-base after:w-0 after:h-[2px] after:bg-[#72FF03] after:block after:transition-all hover:after:w-[100%] hover:text-[#72FF03]  transition"
+                            href="/aboutus">About Us</a></li>
+                </ul>
+
+                <div
+                    class="flex justify-center items-center gap-4 bg-[#72ff03] p-2 mx-2 rounded-sm font-extrabold text-black hover:bg-white ">
+                    <ul>
+                        <!-- <li><a class=" " href="/">Log In</a></li> -->
+                    </ul>
+                    <i class="fa-solid fa-right-to-bracket" style="color:#000;"></i>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="h-fit">
+            <div class="grid grid-cols-2 w-[100%] h-96 gap-7 items-center justify-between mb-10 ">
+                <div class="block w-[100%]">  
+                    <div class="flex flex-col w-[100%] gap-4 justify-around items-start px-2 mx-3 mt-32">
+                        <h2 class="font-extrabold text-6xl font-sans">Cook with what  <br> <span class="font-extrabold text-6xl font-sans text-[#72ff03]">you have !</span> </h2>
+                        <h6 class="text-xl mb-7 font-semibold" >Discover and explore recipes using <br> the ingredients you have on hand from our three categories.
+                        </h6>
+                        <div class="flex gap-6">
+                        <button class="bg-green-500 p-3 rounded-md font-black border-2 border-black cursor-pointer hover:bg-white hover:text-black " onclick="openVegetarianPage()"><i class="fa-solid fa-carrot fa-lg"></i><br> VEGETARIAN </button> 
+                        
+                        <button  class="bg-red-500 p-3 rounded-md font-black border-2 border-black cursor-pointer hover:bg-white hover:text-black" onclick="openNonVegetarianPage()"><i class="fa-solid fa-drumstick-bite fa-lg"></i><br> NON-VEGETARIAN</button>
+                        <button  class="bg-yellow-500 p-3 rounded-md font-black border-2 border-black cursor-pointer hover:bg-white hover:text-black" onclick="openEggetarianPage()"><i class="fa-solid fa-egg fa-lg"></i><br> EGGETARIAN</button>
+                        <button class="bg-purple-500 p-3 rounded-md font-black border-2 border-black cursor-pointer hover:bg-white hover:text-black " onclick=" openSpecialPage()">
+                            <i class="fa-solid fa-carrot fa-lg"></i>
+                            <i class="fa-solid fa-drumstick-bite fa-lg ml-2"></i>
+                            <i class="fa-solid fa-egg fa-lg ml-2"></i>
+                            <br> SPECIAL 
+                          </button>
+                          
+
+                        <script>
+                            function openVegetarianPage() {
+                                //window.open('vegetarian.html', '_blank');
+                                window.location.href = './veg';
+                            }
+
+                            function openNonVegetarianPage() {
+                               // window.open('nonvegetarian.html', '_blank');
+                               window.location.href = './nonveg';
+                            }
+
+                            function openEggetarianPage() {
+                                //window.open('eggetarian.html', '_blank');
+                                // for ejs file dont mention extension
+                                // it is server side template
+                                window.location.href = './egg';
+                            }
+
+                            function openSpecialPage() {
+                                //window.open('vegetarian.html', '_blank');
+                                window.location.href = './specialsearch';
+                            }
+                        </script>
+                        </div>
+                    </div>
+                </div>
+                <div class=" w-[100%] flex justify-between items-center bg-black py-10">
+                    <img src="./images/pie-removebg-preview.png" class="w-[75%] h-auto select-none relative animate-[spin_10s_linear_infinite]" alt="">
+                    <div class="flex flex-col items-center">
+                    <img src="./images/spice-no-bg-removebg-preview.png" class="w-[75%] h-auto select-none relative animate-[spin_10s_linear_infinite]" alt="">
+                    <img src="./images/noodles-removebg-preview.png" class="w-[75%] h-auto select-none relative animate-[spin_10s_linear_infinite]" alt="">
+                    <img src="./images/biryani-removebg-preview.png" class="w-[75%] h-auto select-none relative animate-[spin_10s_linear_infinite]" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-48 pb-10 flex flex-col items-center justify-center bg-white border-black border-b-2 border-t-2 ">
+            <p class="font-extrabold font-sans text-6xl p-10 text-[#000000] text-left">OUR QUALITIES</p>
+          <div class="flex gap-8 justify-between items-center">
+             <div class="flex flex-col gap-4 items-center justify-center text-white rounded-lg border-2 border-black p-10 shadow-md shadow-gray-500 bg-black">
+                <i class="fa-solid fa-database fa-2xl"></i>
+                <p class="text-center font-medium" ><br> Finest Kitchen Staples</p>
+             </div>
+             <div class="flex flex-col gap-4 items-center justify-center text-white rounded-lg border-2 border-black p-10 shadow-md shadow-gray-500 bg-black">
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+                <p class="text-center font-medium" ><br> Exact Recipe Discovery</p>
+             </div>
+             <div class="flex flex-col gap-4 items-center justify-center text-white rounded-lg border-2 border-black p-10 shadow-md shadow-gray-500 bg-black">
+                <i class="fa-solid fa-laptop fa-2xl"></i>
+                <p class="text-center font-medium" ><br> User-First Design Approach</p>
+             </div>
+             <div class="flex flex-col gap-4 items-center justify-center text-white rounded-lg border-2 border-black p-10 shadow-md shadow-gray-500 bg-black">
+                <i class="fa-solid fa-bowl-food fa-2xl"></i>
+                <p class="text-center font-medium" ><br> Proven Plate Preparations</p>
+             </div>
+          </div>
+        </section>
+        <footer>
+            <section class="h-full bg-black">
+                <div class="flex flex-row justify-between gap-10">
+                    <div class="w-52">
+                        <img src="./images/mae-mu-Pvclb-iHHYY-unsplash.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col gap-6 text-white font-normal text-xl mt-32">
+                        <ul class="flex flex-row no-underline gap-14 items-center justify-center"> 
+                            <li><a   class="no-underline text-black font-normal hover:after:w-[100%] hover:text-[#000] bg-white hover:bg-[#72ff03] p-2 rounded " href="/feedback">Feedback</a></li>
+                            <li><a  class="no-underline text-black font-normal hover:after:w-[100%] hover:text-[#000] bg-white hover:bg-[#72ff03] p-2 rounded " href="/contact">Contact Us</a></li>
+                        </ul>
+                        <p class="text-sm"> &copy; 2023 dishdynamo.com  All rights reserved.</p>
+                    </div>
+                    <div class="w-36 mr-10">
+                        <img src="./images/black background food photography.jpeg" alt="">
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </main>
+    <script src="./javascripts/index.js"></script>
+    <script src="./index1.js"></script>
+
+</body>
+
+</html>
