@@ -2,3 +2,5 @@ node_modules/
 images/
 report/
 database/
+.env/
+.local/
